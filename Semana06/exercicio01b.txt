@@ -1,0 +1,23 @@
+1) Limite de Bytes em Pacotes TCP e UDP:
+
+TCP: O TCP é um protocolo de transporte que é orientado à conexão e confiável. 
+Ele divide os dados em segmentos e adiciona um cabeçalho com informações de controle, como número de sequência, número de confirmação, entre outros. 
+O tamanho máximo de um segmento TCP (incluindo o cabeçalho) é determinado pela MTU (Maximum Transmission Unit) da rede. 
+A MTU varia de rede para rede, mas geralmente é de 1500 bytes em redes Ethernet.
+
+UDP: O UDP é um protocolo de transporte que é não orientado à conexão e não confiável. 
+Ele também divide os dados em datagramas, mas não adiciona a mesma sobrecarga que o TCP. 
+O tamanho máximo de um datagrama UDP (incluindo o cabeçalho) é determinado pela MTU da rede. 
+Assim como no TCP, a MTU varia de rede para rede.
+
+
+
+2) Transmissão de Arquivos Grandes via Internet com TCP e UDP:
+
+TCP: Quando se trata de transmitir um arquivo grande via internet usando TCP, o protocolo garante a entrega confiável dos dados. 
+Ele faz isso retransmitindo pacotes se necessário e garantindo que os dados cheguem corretamente na ordem correta. 
+Isso é ideal para transferências onde a integridade e a ordem dos dados são críticas, como em downloads de arquivos, transmissões de vídeo, e transferências de arquivos sensíveis.
+
+UDP: O UDP, por outro lado, não oferece garantias de entrega ou ordem. 
+Isso significa que ao enviar um arquivo grande usando UDP, você corre o risco de alguns pacotes se perderem ou chegarem fora de ordem.
+ No entanto, por não ter a sobrecarga de controle de congestionamento e retransmissão, o UDP pode ser mais rápido em determinadas situações, como em transmissões de vídeo ao vivo ou jogos online, onde a latência é mais crítica que a integridade dos dados.
