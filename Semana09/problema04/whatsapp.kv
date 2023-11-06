@@ -1,0 +1,19 @@
+pip install kivy
+
+BoxLayout:
+    orientation: 'vertical'
+
+    Label:
+        text: 'Contato'
+        size_hint_y: None
+        height: 50
+
+    ScrollView:
+        TextInput:
+            id: chat_input
+            hint_text: 'Digite sua mensagem...'
+            readonly: False
+
+    Button:
+        text: 'Enviar'
+        on_press: app.enviar_mensagem(chat_input.text)
